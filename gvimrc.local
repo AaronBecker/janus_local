@@ -1,0 +1,5 @@
+
+set cursorline
+highlight CursorLine guibg=grey10
+set guifont=Consolas:h15,Inconsolata:h15,DejaVu_Sans_Mono:h15,Monaco:h15
+
