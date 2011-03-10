@@ -34,9 +34,12 @@ set backupcopy=yes
 set writebackup
 set backup
 set autowrite
-au FocusLost * :wa
 
-" Ignore swap files unless I restore manually
+" Save on unfocus. Note that we require a filename that is at least
+" one character long to avoid trying to save anonymous buffers.
+au FocusLost ?* :wa
+
+" Ignore swap files unless I restore manually.
 au SwapExists * let v:swapchoice='e'
 
 " Low priority file suffixes
