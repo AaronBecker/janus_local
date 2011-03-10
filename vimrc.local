@@ -16,6 +16,10 @@ map <leader>w :call TrimWhiteSpace()<CR>
 set gdefault
 set nohlsearch
 
+" Don't beep at me
+set vb
+set noerrorbells
+
 " Extra movement keys
 noremap <space> <C-d>
 noremap <C-space> <C-u>
@@ -23,6 +27,7 @@ nmap j gj
 nmap k gk
 
 " Auto-save
+set backupcopy=yes
 set writebackup
 set backup
 set autowrite
