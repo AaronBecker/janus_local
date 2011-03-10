@@ -5,6 +5,9 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
+" No line numbering for console version (overridden for GUI)
+set nonumber
+
 " Remove trailing whitespace
 function TrimWhiteSpace()
     %s/\s*$//
