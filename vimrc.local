@@ -1,40 +1,43 @@
 
-filetype off
-call pathogen#runtime_append_all_bundles()
-filetype plugin on
-
+" Whitespace preferences
 set nolist
-"set nonumber
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
-set writebackup
-set backup
-
-set gdefault
-set nohlsearch
-
-noremap <space> <C-d>
-noremap <C-space> <C-u>
-nmap j gj
-nmap k gk
-
-set autowrite
-au FocusLost * :wa
-
-set suffixes=.bak,~,.swp,.o,.log,.class,.bbl,.dvi,.log,.aux
-
-map <leader>u :GundoToggle
-
+" Remove trailing whitespace
 function TrimWhiteSpace()
     %s/\s*$//
     ''
 endfunction
 map <leader>w :call TrimWhiteSpace()<CR>
 
+" Less annoying search defaults
+set gdefault
+set nohlsearch
+
+" Extra movement keys
+noremap <space> <C-d>
+noremap <C-space> <C-u>
+nmap j gj
+nmap k gk
+
+" Auto-save
+set writebackup
+set backup
+set autowrite
+au FocusLost * :wa
+
+" Ignore swap files unless I restore manually
+au SwapExists * let v:swapchoice='e'
+
+" Low priority file suffixes
+set suffixes=.bak,~,.swp,.o,.log,.class,.bbl,.dvi,.log,.aux
+
+" GUndo
 map <leader>u :GundoToggle<CR>
 
+" Project.vim
 let g:proj_flags="gimsvt"
-"unmap <silent> <leader>p
 map <silent> <leader>p <Plug>ToggleProject
+
