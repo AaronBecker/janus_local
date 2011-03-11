@@ -34,6 +34,8 @@ set backupcopy=yes
 set writebackup
 set backup
 set autowrite
+set undodir=~/.vim/backup
+set undofile
 
 " Save on unfocus. Note that we require a filename that is at least
 " one character long to avoid trying to save anonymous buffers.
