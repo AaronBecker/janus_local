@@ -54,3 +54,8 @@ map <leader>u :GundoToggle<CR>
 let g:proj_flags="gimsvt"
 map <silent> <leader>p <Plug>ToggleProject
 
+" Syntastic doesn't handle include paths, so turn it off for C/C++
+let g:syntastic_disabled_filetypes = ['c', 'cpp']
+
+color vividchalk2
+
